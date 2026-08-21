@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
 
-  --color-ink: #0f172a;
-  --color-ink-soft: #475569;
-  --color-paper: #ffffff;
-  --color-paper-soft: #f8fafc;
-  --color-line: #e2e8f0;
-  --color-accent: #2563eb;
-  --color-accent-soft: #eff6ff;
+  --color-bg: #f3f2f2;
+  --color-text: #201f1d;
+  --color-accent: #b68235;
+  --color-accent-300: #facb8d;
+  --color-accent-700: #7d5411;
+  --color-accent-600: #a06f24;
+  --color-divider: color-mix(in srgb, #201f1d 16%, transparent);
+  --color-neutral-100: #f8f4f4;
+  --color-neutral-200: #eae7e7;
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+  --color-ground-dark: #161826;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 7px;
+
+  /* Folio's two layout breakpoints: narrow (780) and compact (1140) —
+     mapped onto sm/lg so the mobile-first cascade matches the spec. */
+  --breakpoint-sm: 780px;
+  --breakpoint-lg: 1140px;
 }
 
 html {
@@ -18,26 +36,65 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 1140px) {
+  section[id] {
+    scroll-margin-top: 0;
+  }
 }
 
 body {
-  background-color: var(--color-paper);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  color: var(--color-accent-700);
+}
+
+a:hover {
+  color: var(--color-accent-600);
+}
+
 ::selection {
-  background-color: var(--color-accent-soft);
-  color: var(--color-accent);
+  background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: var(--color-text);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-feature-settings: "tnum";
+}
+
+.justify-hyphenate {
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (max-width: 780px) {
+  .justify-hyphenate {
+    text-align: left;
+    hyphens: manual;
+  }
 }
 
 /* Scroll-reveal animation */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(14px);
+  transition: opacity 0.85s ease, transform 0.95s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .reveal.is-visible {
@@ -45,15 +102,79 @@ body {
   transform: translateY(0);
 }
 
-/* Subtle link underline */
-.link-underline {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: background-size 0.25s ease;
+.reveal-rule {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.link-underline:hover {
-  background-size: 100% 1px;
+.reveal-rule.is-visible {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-rule {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Classical component layer — .plate, .btn, .table */
+.plate {
+  filter: sepia(0.22) saturate(0.82) contrast(1.05);
+  box-sizing: border-box;
+  border: 6px solid var(--color-neutral-200);
+  outline: 1px solid var(--color-divider);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 9.2px 16.5px;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+
+.btn-secondary {
+  border-color: var(--color-divider);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--color-text) 7%, transparent);
+}
+
+.btn-ghost {
+  color: var(--color-accent-700);
+  padding-inline: 4.6px;
+}
+
+.btn-ghost:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
 }
