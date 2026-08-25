@@ -87,7 +87,7 @@ export default function Plates() {
             <p className="mt-2.5 font-heading text-[26px] leading-[1.2] text-neutral-700">Three things I built, drawn</p>
           </div>
           <p ref={introRef} className="reveal justify-hyphenate max-w-[62ch] text-[16.5px] leading-[1.75]">
-            All three shipped inside enterprise products I cannot screenshot, so each plate is an architecture
+            The features shipped inside enterprise products I cannot screenshot, so each plate is an architecture
             drawing of what I built and a plain account of the decision behind it. The diagrams are accurate to the
             systems; the claims are the ones I can stand behind in an interview.
           </p>

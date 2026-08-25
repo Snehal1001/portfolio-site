@@ -8,20 +8,20 @@ export const profile = {
   email: "snehal.prajapati.dev@gmail.com",
   phone: "+91 9106721561",
   // TODO: replace with your real LinkedIn / GitHub URLs
-  linkedin: "https://linkedin.com/in/snehal-prajapati",
-  github: "https://github.com/snehal-prajapati",
+  linkedin: "https://www.linkedin.com/in/snehal-prajapati-582146184/",
+  github: "https://github.com/Snehal1001",
   resumeFile: "/Snehal-Prajapati-Resume.pdf",
   runningHead: "Gujarat, India · Est. 2021",
   openingColumns: [
-    "Five plus years spent on systems that cannot afford to break — property management SaaS serving thousands of daily users across APAC, a government electoral register, a recruiting platform stitched together from a dozen scattered databases.",
-    "The work is mostly unglamorous and entirely consequential: migrating legacy AngularJS to React without a freeze, decomposing a 1,500-line component, making a search box return the right record on the first keystroke.",
+    "Five-plus years designing and delivering production-grade applications across SaaS, government, and enterprise domains — a property management platform used across APAC, a government-grade electoral management system, and a recruiting platform built to unify data from multiple distributed office databases.",
+    "The work has centred on modernising legacy frontends and shipping features that matter: migrating AngularJS modules to React, refactoring a 1,500+ line component into modular classes, and delivering search and real-time data-sync capabilities used by thousands of daily active users.",
   ],
   statement:
-    "I take production systems that have grown past their original architecture and make them behave — modernising the frontend, straightening the data flow, and shipping the feature that was blocked behind both.",
+    "I modernise legacy frontends, connect fragmented backend systems, and ship the features that were stuck behind both.",
   stats: [
-    { value: "5+", label: "years shipping production code, all of it on systems with real users on the other end." },
-    { value: "03", label: "domains — enterprise SaaS, government, and recruiting — each with its own definition of “cannot fail”." },
-    { value: "1", unit: "k+", label: "daily active users on Property Tree, the APAC platform I own modules in." },
+    { value: "5+", label: "years designing and delivering production-grade applications across SaaS, government, and enterprise domains." },
+    { value: "03", label: "domains — enterprise SaaS, government, and recruiting." },
+    { value: "1,000s", label: "daily active users on Property Tree, the APAC SaaS platform where I own core product modules." },
   ],
 };
 
@@ -36,24 +36,24 @@ export const index = [
 
 export const skills = [
   {
+    category: "Languages",
+    items: "TypeScript · JavaScript · C# · SQL · HTML5 · CSS3 · Python (basics)",
+  },
+  {
     category: "Frontend",
-    items: "React.js · Angular · AngularJS migration · TypeScript · JavaScript · Zustand · Syncfusion · MUI · HTML5 · CSS3",
+    items: "React.js · Angular · AngularJS · Zustand · Syncfusion Component Library · MUI",
   },
   {
     category: "Backend & APIs",
-    items: ".NET / ASP.NET Core · C# · RESTful APIs · event-driven architecture · Entity Framework Core",
-  },
-  {
-    category: "Data",
-    items: "MS SQL Server · CosmosDB · SQL · schema and query design for paged hierarchies",
+    items: ".NET / ASP.NET Core · RESTful APIs · Event-Driven Architecture · Entity Framework Core · MS SQL",
   },
   {
     category: "Cloud",
-    items: "Microsoft Azure · Azure Function Apps · MSAL / JWT authentication",
+    items: "Microsoft Azure",
   },
   {
-    category: "Practice",
-    items: "Agile / Scrum · code review · incremental migration of live systems · Git · Python (basics)",
+    category: "Tools & Practices",
+    items: "Git · Agile / Scrum · Code Review · Kanban",
   },
 ];
 
@@ -62,11 +62,10 @@ export const experience = [
     company: "MRI Software",
     role: "Software Engineer II",
     period: "Jul 2025 — Present",
-    lede: "Property Tree is a live cloud SaaS platform for end-to-end property management across APAC, with thousands of daily active users and no acceptable downtime. I own Tenancy, Owner and Property Management — invoicing, inspections, receipting.",
+    lede: "Property Tree is a live cloud-based SaaS platform used across the APAC region for end-to-end property management, serving thousands of daily active users. I own critical product modules — Tenancy, Owner, and Property Management — covering invoicing, inspections, and receipting workflows.",
     highlights: [
-      "Led the migration of legacy AngularJS modules to React, module by module, with the product live throughout.",
-      "Delivered Global Search end-to-end, from the UX flow to the indexed reads behind it.",
-      "Work across the React frontend and the .NET / MS SQL backend rather than throwing tickets over a wall.",
+      "Led the migration of legacy AngularJS modules to React, modernising frontend architecture and improving long-term maintainability.",
+      "Delivered the Global Search feature end-to-end — a high-visibility capability enabling cross-module discovery.",
     ],
     stack: "React · AngularJS · .NET · MS SQL Server · Microsoft Azure",
   },
@@ -74,11 +73,11 @@ export const experience = [
     company: "Reflik",
     role: "Software Engineer",
     period: "Jun 2024 — Jul 2025",
-    lede: "Recruiting data lived in separate office databases with no unified view. I architected and built the centralised Application Tracking System that replaced the guesswork.",
+    lede: "Recruiting data lived across multiple distributed office databases with no centralised way to view it in real time. I architected and built the Application Tracking System (ATS) that consolidated it.",
     highlights: [
-      "Designed the consolidation model and built the full-stack admin portal, authenticated with MSAL and JWT.",
-      "Engineered an event-driven pipeline on Azure Function Apps keeping SQL Server and CosmosDB in sync in real time.",
-      "Chose events over scheduled polling so the portal reflected writes within seconds, not hours.",
+      "Architected and built a centralised Application Tracking System (ATS) consolidating real-time data from multiple distributed office databases.",
+      "Designed and developed a full-stack admin portal with secure authentication using MSAL and JWT.",
+      "Engineered an event-driven data pipeline using Azure Function Apps to orchestrate real-time data synchronisation across SQL Server and CosmosDB.",
     ],
     stack: "React · .NET · Azure Function Apps · MS SQL Server · CosmosDB · MSAL · JWT",
   },
@@ -86,13 +85,12 @@ export const experience = [
     company: "Civica India",
     role: "Software Engineer",
     period: "Sep 2021 — Jun 2024",
-    lede: "A government-grade Electoral Management System, built in a strict Agile/Scrum environment where correctness was audited rather than assumed.",
+    lede: "A government-grade Electoral Management System, built in a strict Agile/Scrum environment.",
     highlights: [
-      "Refactored a 1,500-line monolithic component into modular, testable classes without changing behaviour.",
-      "Built the Electors tree-grid on Syncfusion to keep deeply nested, large-scale data usable and performant.",
-      "Worked the full stack: .NET Core, Entity Framework Core, MS SQL Server, Angular 12+.",
+      "Led a major refactor of a 1,500+ line monolithic component, decomposing it into modular, maintainable classes.",
+      "Developed an Electors tree-grid using Syncfusion, enhancing hierarchical data visualisation for large datasets.",
     ],
-    stack: ".NET Core · Entity Framework Core · MS SQL Server · Angular 12+ · Syncfusion",
+    stack: ".NET Core · Entity Framework Core · MS SQL Server · Angular 12+",
   },
 ];
 
@@ -105,53 +103,36 @@ export const education = {
 export const projects = [
   {
     numeral: "I",
-    title: "Global Search",
-    company: "MRI Software · Property Tree",
-    period: "2025",
-    stack: "React · AngularJS · .NET · MS SQL Server · Azure",
-    summary:
-      "A single search that returns tenancies, owners, properties and records from anywhere in the product — built into a platform that was half AngularJS and half React at the time, and never offline.",
-    diagram: "global-search",
-    figCaption: "Fig. I — one query contract across a half-migrated frontend",
-    problem:
-      "Property Tree grew module by module. Finding one tenancy meant drilling through several nested screens — a real cost for staff working dozens of records a day — and no two modules shared a query path.",
-    decision:
-      "Define one search contract on the .NET side and consume it from a React island inside the AngularJS shell, rather than waiting for the migration to finish. Search shipped modern first.",
-    consequence:
-      "Users reach any record from one keystroke instead of a menu tree, and the contract became the template for every module migrated after it.",
-  },
-  {
-    numeral: "II",
     title: "Centralised ATS",
     company: "Reflik",
     period: "2024 — 2025",
-    stack: "React · .NET · Azure Functions · MS SQL · CosmosDB",
+    stack: "React · .NET · Azure Function Apps · MS SQL Server · CosmosDB · MSAL · JWT",
     summary:
-      "An admin portal that consolidates recruiting data from several distributed office databases into one secure, real-time view — architected from an empty repository.",
+      "A centralised Application Tracking System (ATS), architected and built from the ground up to consolidate real-time recruiting data from multiple distributed office databases.",
     diagram: "centralised-ats",
-    figCaption: "Fig. II — event-driven consolidation across distributed office databases",
+    figCaption: "Fig. II — real-time data consolidation from distributed office databases into one ATS",
     problem:
-      "Each office ran its own database. Admins had no consistent picture of an application’s state, and any answer meant checking systems one at a time.",
+      "Recruiting data was split across multiple distributed office databases, with no centralised system to bring it together in real time.",
     decision:
-      "Treat every office write as an event rather than something to poll for: Function Apps orchestrate the sync, SQL Server stays the system of record, CosmosDB carries the projections the portal reads.",
+      "Architected and built the ATS as a full-stack admin portal secured with MSAL and JWT, backed by an event-driven data pipeline on Azure Function Apps that synchronised SQL Server and CosmosDB in real time.",
     consequence:
-      "One secure source of truth, current within seconds of a write, behind MSAL and JWT — replacing database-by-database visibility entirely.",
+      "A single, secured system for real-time recruiting data, replacing the disconnected office databases it consolidated.",
   },
   {
-    numeral: "III",
+    numeral: "II",
     title: "Electors Tree-Grid",
     company: "Civica India · Electoral Management System",
     period: "2021 — 2024",
-    stack: ".NET Core · EF Core · MS SQL · Angular 12+ · Syncfusion",
+    stack: ".NET Core · Entity Framework Core · MS SQL Server · Angular 12+ · Syncfusion",
     summary:
-      "Hierarchical visualisation of large-scale electoral data inside a government system, delivered alongside the refactor that made the surrounding code survivable.",
+      "A hierarchical tree-grid for visualising large-scale electoral data, built with Syncfusion inside a government-grade Electoral Management System.",
     diagram: "electors-tree-grid",
-    figCaption: "Fig. III — a 1,500-line component decomposed, then fed paged subtrees",
+    figCaption: "Fig. III — a 1,500+ line component refactored, then visualised via a Syncfusion tree-grid",
     problem:
-      "Deeply nested elector data had to stay usable at national scale, and the component responsible had passed 1,500 lines — every change carried regression risk in an audited environment.",
+      "A 1,500+ line monolithic component had become hard to maintain, and the system needed a way to visualise deeply hierarchical elector data for large datasets.",
     decision:
-      "Split the component into query, hierarchy, paging and render responsibilities first, then build the Syncfusion tree-grid against paged subtrees rather than loading whole branches.",
+      "Led a refactor of the component into modular, maintainable classes, then built the Electors tree-grid on Syncfusion to handle the hierarchical, large-dataset visualisation.",
     consequence:
-      "A hierarchical view that holds up on production-sized datasets, on a codebase where the next engineer can make a change safely.",
+      "A maintainable codebase and a tree-grid that made large, deeply nested electoral datasets usable, delivered in a strict Agile/Scrum, government-grade environment.",
   },
 ];
